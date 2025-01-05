@@ -204,6 +204,7 @@ h1 {
 
 .python {
     position: relative;
+    color: #232323;
 }
 
 .python::before {
@@ -264,6 +265,53 @@ h3 {
     font-weight: bold;
     margin: 0; /* Remove default margin */
 }
+
+details {
+    cursor: pointer;
+  }
+  
+  summary:focus-visible {
+    outline: 2px solid orange;
+    outline-offset: 8px;
+    border-radius: 4px;
+  }
+  
+  h4 {
+    width: 760px;
+  }
+  
+  summary {
+    font-size: 20px;
+    color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  summary::marker {
+    display: none;
+    content: "";
+  }
+  
+  span {
+    margin-top: 4px;
+    color: #f4f4f6;
+  }
+  
+  details > p {
+    max-width: 650px;
+    color: #101010;
+    font-size: 18px;
+    line-height: 155%;
+    letter-spacing: .1px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+  }
+  
+  hr {
+    border: 1px solid #404E5C;
+    margin-block-end: 30px;
+  }
 
 .footer {
     background-color: #005cc6;
