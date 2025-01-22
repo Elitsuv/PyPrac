@@ -1,0 +1,17 @@
+[
+    {
+        "question": "What is the output of the following code?\n\nprint(2 + 3 * 4)",
+        "options": ["14", "20", "12", "10"],
+        "answer": "14"
+    },
+    {
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": ["1variable", "variable1", "variable-1", "variable.1"],
+        "answer": "variable1"
+    },
+    {
+        "question": "What is the correct syntax to define a function in Python?",
+        "options": ["function myFunction():", "def myFunction():", "create myFunction():", "function: myFunction()"],
+        "answer": "def myFunction():"
+    }
+]
