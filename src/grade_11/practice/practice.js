@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('practice_questions.json')
+    fetch('src/grade_11/practice/practice_questions.json') // Adjusted the path to the JSON file
         .then(response => response.json())
         .then(data => {
             const questionsContainer = document.getElementById('questions-container');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching questions:', error));
 
     document.getElementById('submit-btn').addEventListener('click', function() {
-        fetch('practice_questions.json')
+        fetch('src/grade_11/practice/practice_questions.json') // Adjusted the path to the JSON file
             .then(response => response.json())
             .then(data => {
                 let score = 0;
