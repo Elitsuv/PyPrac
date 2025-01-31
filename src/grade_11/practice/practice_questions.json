@@ -51,12 +51,12 @@
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3, 4]\nprint(x[1:3])",
-        "options": "[1, 2]", "[2, 3]", "[3, 4]", "[1, 2, 3]"],
+        "options": ["[1, 2]", "[2, 3]", "[3, 4]", "[1, 2, 3]"],
         "answer": "[2, 3]"
     },
     {
         "question": "What is the output of the following code?\n\nx = {1, 2, 3}\ny = {2, 3, 4}\nprint(x & y)",
-        "options": "{1, 2, 3}", "{2, 3}", "{3, 4}", "{1, 4}"],
+        "options": ["{1, 2, 3}", "{2, 3}", "{3, 4}", "{1, 4}"],
         "answer": "{2, 3}"
     },
     {
@@ -66,102 +66,102 @@
     },
     {
         "question": "What is the output of the following code?\n\nx = 'Python'\nprint(x[0])",
-        "options": "'P'", "'p'", "'y'", "Error"],
+        "options": ["'P'", "'p'", "'y'", "Error"],
         "answer": "'P'"
     },
     {
         "question": "What is the output of the following code?\n\nx = [10, 20, 30]\nprint(x[1:])",
-        "options": "[10, 20, 30]", "[20, 30]", "[30, 20]", "[10, 30]"],
+        "options": ["[10, 20, 30]", "[20, 30]", "[30, 20]", "[10, 30]"],
         "answer": "[20, 30]"
     },
     {
         "question": "What is the output of the following code?\n\nx = {1, 2, 3}\nprint(len(x))",
-        "options": "2", "3", "4", "None"],
+        "options": ["2", "3", "4", "None"],
         "answer": "3"
     },
     {
         "question": "What is the output of the following code?\n\nx = 'hello'\ny = x.upper()\nprint(y)",
-        "options": "'hello'", "'HELLO'", "'Hello'", "None"],
+        "options": ["'hello'", "'HELLO'", "'Hello'", "None"],
         "answer": "'HELLO'"
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3]\nprint(x[::-1])",
-        "options": "[3, 2, 1]", "[1, 2, 3]", "[2, 3, 1]", "None"],
+        "options": ["[3, 2, 1]", "[1, 2, 3]", "[2, 3, 1]", "None"],
         "answer": "[3, 2, 1]"
     },
     {
         "question": "What is the output of the following code?\n\nx = {1, 2, 3}\nx.add(4)\nprint(x)",
-        "options": "{1, 2, 3}", "{1, 2, 3, 4}", "{1, 2, 4}", "None"],
+        "options": ["{1, 2, 3}", "{1, 2, 3, 4}", "{1, 2, 4}", "None"],
         "answer": "{1, 2, 3, 4}"
     },
     {
         "question": "What is the output of the following code?\n\nx = (1, 2, 3)\nprint(x[1])",
-        "options": "1", "2", "3", "None"],
+        "options": ["1", "2", "3", "None"],
         "answer": "2"
     },
     {
         "question": "What is the output of the following code?\n\nx = 'abc'\nprint(x + 'd')",
-        "options": "'abcd'", "'abc d'", "'ab cd'", "None"],
+        "options": ["'abcd'", "'abc d'", "'ab cd'", "None"],
         "answer": "'abcd'"
     },
     {
         "question": "What is the output of the following code?\n\nx = 5\nif x == 5:\n    print('Yes')\nelse:\n    print('No')",
-        "options": "Yes", "No", "Error", "None"],
+        "options": ["Yes", "No", "Error", "None"],
         "answer": "Yes"
     },
     {
         "question": "What is the output of the following code?\n\nx = 10\nfor i in range(5):\n    x -= 1\nprint(x)",
-        "options": "5", "6", "4", "None"],
+        "options": ["5", "6", "4", "None"],
         "answer": "5"
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3]\nfor i in x:\n    print(i * 2)",
-        "options": "2 4 6", "1 2 3", "6 5 4", "None"],
+        "options": ["2 4 6", "1 2 3", "6 5 4", "None"],
         "answer": "2 4 6"
     },
     {
         "question": "What is the output of the following code?\n\nx = 'Python'\nprint(x[1:4])",
-        "options": "'Pyt'", "'yth'", "'Pyth'", "'on'"],
+        "options": ["'Pyt'", "'yth'", "'Pyth'", "'on'"],
         "answer": "'yth'"
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3, 4]\ny = x.copy()\ny[1] = 5\nprint(x)",
-        "options": "[1, 2, 3, 4]", "[1, 5, 3, 4]", "[1, 2, 5, 4]", "None"],
+        "options": ["[1, 2, 3, 4]", "[1, 5, 3, 4]", "[1, 2, 5, 4]", "None"],
         "answer": "[1, 2, 3, 4]"
     },
     {
         "question": "What is the output of the following code?\n\nx = {1, 2, 3}\ny = {3, 4, 5}\nprint(x | y)",
-        "options": "{1, 2, 3, 4, 5}", "{1, 2, 3}", "{3, 4, 5}", "{1, 2, 5}"],
+        "options": ["{1, 2, 3, 4, 5}", "{1, 2, 3}", "{3, 4, 5}", "{1, 2, 5}"],
         "answer": "{1, 2, 3, 4, 5}"
     },
     {
         "question": "What is the output of the following code?\n\nx = 10\nif x > 5:\n    print('Greater')\nelse:\n    print('Smaller')",
-        "options": "Greater", "Smaller", "None", "Error"],
+        "options": ["Greater", "Smaller", "None", "Error"],
         "answer": "Greater"
     },
     {
         "question": "What is the output of the following code?\n\nx = 'Python'\nprint(x[-2:])",
-        "options": "'on'", "'Py'", "'tho'", "Error"],
+        "options": ["'on'", "'Py'", "'tho'", "Error"],
         "answer": "'on'"
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3]\nprint(sum(x))",
-        "options": "3", "6", "5", "None"],
+        "options": ["3", "6", "5", "None"],
         "answer": "6"
     },
     {
         "question": "What is the output of the following code?\n\nx = [10, 20, 30]\nprint(x.index(20))",
-        "options": "1", "0", "2", "None"],
+        "options": ["1", "0", "2", "None"],
         "answer": "1"
     },
     {
         "question": "What is the output of the following code?\n\nx = 'hello'\nprint(x.replace('e', 'a'))",
-        "options": "'hallo'", "'hello'", "'hallo'", "None"],
+        "options": ["'hallo'", "'hello'", "'hallo'", "None"],
         "answer": "'hallo'"
     },
     {
         "question": "What is the output of the following code?\n\nx = [1, 2, 3, 4]\nprint(x[-3:-1])",
-        "options": "[2, 3]", "[1, 2]", "[3, 4]", "[2, 4]"],
+        "options": ["[2, 3]", "[1, 2]", "[3, 4]", "[2, 4]"],
         "answer": "[2, 3]"
     }
 ]
