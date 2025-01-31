@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('src/grade_11/practice/practice_questions.json') // Adjusted the path to the JSON file
+    fetch('practice_questions.json') // Adjusted the path to the JSON file
         .then(response => response.json())
         .then(data => {
             const questionsContainer = document.getElementById('questions-container');
