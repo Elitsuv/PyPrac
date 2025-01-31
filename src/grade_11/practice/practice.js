@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('practice_questions.json') // Adjusted path
-        .then(response => response.json())
+    fetch('practice_questions.json') 
+        .then(response => {
+            // Check if the response is successful
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             const questionsContainer = document.getElementById('questions-container');
             data.forEach((question, index) => {
@@ -23,11 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 questionsContainer.appendChild(questionDiv);
             });
         })
-        .catch(error => console.error('Error fetching questions:', error));
+        .catch(error => {
+            console.error('Error fetching questions:', error); // Improved error logging
+        });
 
+    // Add event listener for the submit button
     document.getElementById('submit-btn').addEventListener('click', function() {
-        fetch('grade_11/practice/practice_questions.json') // Adjusted path
-            .then(response => response.json())
+        // Adjust the path for the second fetch
+        fetch('grade_11/practice/practice_questions.json') // Ensure correct relative path
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 let score = 0;
                 data.forEach((question, index) => {
@@ -39,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const resultContainer = document.getElementById('result-container');
                 resultContainer.innerHTML = `You scored ${score} out of ${data.length}`;
             })
-            .catch(error => console.error('Error fetching questions:', error));
+            .catch(error => {
+                console.error('Error fetching questions for grading:', error); // Error handling for grading
+            });
     });
 });
