@@ -1,81 +1,64 @@
-## **OPEN SOURCE UNDER**
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
----
 # PyPrac
 
-**PyPrac** is an open-source platform designed to help students practice school-level Python problems for free. Whether you're a beginner exploring Python programming or a teacher looking for resources to guide students, PyPrac provides a collection of problems and solutions to enhance learning and problem-solving skills.
+Welcome to **PyPrac**! This is a practice platform for Python, specially designed for grade 11th and 12th students. It's completely free, and you can practice as much as you want. You can even contribute your own Python questions to help others improve their skills.
 
----
+## How to Use PyPrac
 
-## Features
+### Step 1: Accessing PyPrac
 
-- **Free Practice Problems**: A curated collection of Python problems suitable for school-level students.
-- **Interactive Exercises**: Practice problems categorized by difficulty and topic.
-- **Solutions and Explanations**: Each problem includes detailed solutions and explanations.
-- **Community-Driven**: Contribute your own problems or improvements to help the platform grow.
-- **Beginner-Friendly**: Designed with simplicity and clarity to help students learn step-by-step.
+**PyPrac** is a web-based platform. You don't need to sign up or log in to start using it. Simply visit the website, and you're ready to go!
 
----
+- **CLick this URL:** [PyPrac](https://elitsuv.github.io/PyPrac/)
 
-## Clone the repository to your local machine:
+### Step 2: Choosing a Python Problem
+
+Once you're on the homepage, scroll down and select **Practice Question**
+
+- **Solve MCQs** of available problems.
+- **Click on a SAQ** to view its SAQ type questions.
+
+### Step 3: Solving a Problem
+
+After selecting a problem, follow these steps:
+
+1. **Read the problem statement:** Understand what the task is asking you to do. The problem will include:
+   - The input format (what the function receives).
+   - The output format (what the function should return).
+
+2. **Write your code:** Test your code in any of the compiler.
+
+
+
+
+
+## Installation (For Developers)
+
+To clone this project
 
 ```bash
-# Clone the repo
-git clone https://github.com/Elitsuv/PyPrac.git
-
-# Navigate to the project directory
-cd PyPrac
+  git clone https://github.com/Elitsuv/Pyprac.git
+```
+```bash
+   cd PyPrac
 ```
 
----
 
-## Usage
 
-1. Open the platform using the instructions above.
-2. Select a category or difficulty level.
-3. Solve the problems and check the solutions.
-4. Track your progress and improve over time.
+# Contributing
 
----
+Contributions are always welcome!
 
-## Contributing
+See `contributing.md` for ways to get started.
 
-We welcome contributions from the community! Here's how you can contribute:
+Please adhere to this project's `code of conduct`.
 
-1. Fork the repository.
-2. Create a new branch:
 
-   ```bash
-   git checkout -b feature-branch
-   ```
+## Feedback
 
-3. Make your changes and commit them:
+If you have any feedback, don't feel shy please open issue or create a discussion in the repository we are happy to resolve it!
 
-   ```bash
-   git commit -m "Add your message here"
-   ```
-
-4. Push to the branch:
-
-   ```bash
-   git push origin feature-branch
-   ```
-
-5. Open a Pull Request and describe your changes.
-
----
 
 ## License
 
-PyPrac is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute this project as per the terms of the license.
+[![MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://choosealicense.com/licenses/mit/)
 
----
-
-## Feedback & Support
-
-If you have any suggestions, issues, or questions, feel free to open an [issue](https://github.com/Elitsuv/PyPrac/issues)
-
----
-
-Happy Coding! 🎉
