@@ -38,6 +38,7 @@ header .sqa {
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s;
+    white-space: nowrap;
 }
 
 header .sqa:hover {
@@ -75,47 +76,24 @@ main {
     color: #005cc6;
 }
 
-/* Updated Answer Row (Options) */
 .options {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 
 .options li {
-    background: #ffffff;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    font-weight: 500;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    transition: background 0.3s ease;
 }
 
 .options li:hover {
-    background: #e3f2fd;
-    border-color: #005cc6;
+    background: #e0e0e0;
 }
 
-.options li.selected {
-    background: #005cc6;
-    color: white;
-    border-color: #003f8a;
-}
-
-/* Option Selection Effect */
-.options li input {
-    margin-right: 10px;
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-/* Submit Button */
 #submit-btn {
     background: linear-gradient(135deg, #005cc6, #003f8a);
     color: white;
@@ -146,8 +124,17 @@ main {
         text-align: center;
     }
 
+    header h1 {
+        font-size: 1.8rem;
+        order: 1;
+        width: 100%;
+    }
+
     header .sqa {
-        margin-top: 10px;
+        order: 2;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
     }
 
     main {
@@ -156,10 +143,6 @@ main {
 
     .question {
         padding: 15px;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
     }
 }
 
@@ -170,20 +153,13 @@ main {
 
     header .sqa {
         font-size: 0.9rem;
-        padding: 8px 12px;
+        padding: 10px 15px;
+        width: 100%;
+        justify-content: center;
     }
 
     .question h2 {
         font-size: 1.2rem;
-    }
-
-    .options {
-        gap: 10px;
-    }
-
-    .options li {
-        font-size: 0.95rem;
-        padding: 10px;
     }
 
     #submit-btn {
