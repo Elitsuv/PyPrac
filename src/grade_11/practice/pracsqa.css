@@ -26,24 +26,34 @@ main {
     margin: 0 auto;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: white;
+    padding: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    background: white;
     border-radius: 8px;
-    overflow: hidden; /* To apply border-radius to the table */
+    overflow: hidden;
 }
 
 thead {
     background-color: #005cc6;
     color: white;
+    font-weight: bold;
 }
 
 thead th {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    border-right: 1px solid black;
+    border-right: 1px solid #ddd;
 }
 
 thead th:last-child {
@@ -53,16 +63,21 @@ thead th:last-child {
 tbody tr {
     background-color: white;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8fbff;
+}
+
+tbody tr:hover {
+    background-color: #e8f1ff;
 }
 
 tbody td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    border-right: 1px solid rgb(60, 60, 60);
+    border-right: 1px solid #ddd;
 }
 
 tbody td:last-child {
@@ -70,51 +85,61 @@ tbody td:last-child {
 }
 
 tbody td.question {
-    text-align: left; /* Align questions to the left */
+    text-align: left;
+    font-weight: 500;
+    color: #444;
 }
 
 .topic-box, .level-box {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 8px;
-    color: white;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .topic-box {
     background-color: #007bff;
+    color: white;
 }
 
 .topic-box.arithmetic {
     background-color: #ff7f50;
+    color: white;
 }
 
 .topic-box.variables {
     background-color: #6a5acd;
+    color: white;
 }
 
 .topic-box.functions {
     background-color: #20b2aa;
+    color: white;
 }
 
 .level-box.easy {
     background-color: #28a745;
+    color: white;
 }
 
 .level-box.medium {
     background-color: #ffc107;
+    color: #333;
 }
 
 .level-box.hard {
     background-color: #dc3545;
+    color: white;
 }
 
 .answer-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
 .answer-icon:hover {
     transform: scale(1.2);
+    opacity: 0.8;
 }
