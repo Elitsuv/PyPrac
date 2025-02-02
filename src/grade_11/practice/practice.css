@@ -28,28 +28,28 @@ header h1 {
 }
 
 header .sqa {
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    background: linear-gradient(135deg, #34a853, #1e7d32); /* Cleaner green tone */
     color: white;
     padding: 10px 15px;
     border-radius: 8px;
     text-align: center;
     display: flex;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none; /* Removed underline */
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s;
     white-space: nowrap;
 }
 
 header .sqa:hover {
-    background: linear-gradient(135deg, #388E3C, #1B5E20);
+    background: linear-gradient(135deg, #2b8c41, #166d2c);
     transform: scale(1.05);
 }
 
 header .sqa::after {
-    content: ' ➔';
+    content: '→'; /* Reduced spacing */
     font-size: 1.2rem;
-    margin-left: 5px;
+    margin-left: 3px; /* Reduced space */
 }
 
 main {
