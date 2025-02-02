@@ -53,17 +53,17 @@ header {
     gap: 10px;
     border: 2px solid rgb(35, 145, 255);
     padding: 8px 15px;
-    height: 3rem; /* Reduced height */
-    width: auto; /* Makes the width dynamic based on content */
+    height: 3rem;
+    width: auto;
     margin-right: 2rem;
-    font-size: 18px; /* Slightly smaller text size for a sleeker look */
+    font-size: 18px;
     color: #000;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: absolute;
-    top: 2.5rem; /* Moved it slightly higher */
-    right: 3rem; /* Moved it further to the right */
+    top: 3rem;
+    right: 8rem;
 }
 
 .notify:hover {
@@ -73,7 +73,7 @@ header {
 }
 
 .bell-icon {
-    width: 20px; /* Slightly smaller icon for proportion */
+    width: 20px;
     height: 20px;
 }
 
@@ -147,17 +147,16 @@ header {
     font-size: 16px;
     z-index: 9999;
     text-align: center;
-    transform: translateX(100%);  /* Start offscreen to the right */
-    animation: slideLeft 0.5s forwards; /* Slide in from the right */
+    transform: translateX(100%);
+    animation: slideLeft 0.5s forwards;
 }
 
-/* Slide-in Animation */
 @keyframes slideLeft {
     0% {
-        transform: translateX(100%); /* Start offscreen */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(0); /* End at its normal position */
+        transform: translateX(0);
     }
 }
 
@@ -183,7 +182,7 @@ h1 {
     animation: animate infinite 7s;
 }
 
-@keyframes animate { 
+@keyframes animate {
     0% { 
         content: "Sharpen ⚒";
         color: #001db0;
@@ -209,7 +208,6 @@ h1 {
 
 .python::before {
     background-color: #ffcc00;
-
     content: "";
     position: absolute;
     width: calc(100% + 4px);
@@ -232,16 +230,15 @@ h3 {
 .list-container {
     display: flex;
     justify-content: flex-start;
-    margin-top: 10px; /* Adjusted margin for better spacing */
-    gap: 20px; /* Added gap between boxes */
+    margin-top: 20px;
 }
 
 .box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px; 
-    height: 70px; 
+    width: 200px;
+    height: 70px;
     border: 2px solid #005cc6;
     border-radius: 13px;
     background-color: #f0f8ff;
@@ -249,6 +246,7 @@ h3 {
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+    margin-right: 130px;
 }
 
 .box:hover {
@@ -256,13 +254,11 @@ h3 {
 }
 
 .box-icon {
-    margin-right: 15px; /* Adjusted icon margin */
-    width: 30px; /* Made the icon size more proportional */
-    height: 30px;
+    margin-right: 20px;
 }
 
 .box p {
-    font-size: 16px; /* Slightly smaller text for better fit */
+    font-size: 18px;
     color: #005cc6;
     font-weight: bold;
     margin: 0;
@@ -334,5 +330,67 @@ hr {
 
 .box a {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 35px;
+        margin-left: 2rem;
+    }
+
+    .header_sub-text {
+        font-size: 16px;
+        margin-left: 2rem;
+    }
+
+    .notify {
+        font-size: 14px;
+        height: 2.5rem;
+        padding: 6px 12px;
+        margin-right: 1rem;
+    }
+
+    .notification-container {
+        width: 250px;
+        top: 10%;
+        right: 1rem;
+    }
+
+    .body_container {
+        margin-left: 2rem;
+    }
+
+    .list-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 160px;
+        height: 60px;
+        margin-right: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .mobile-alert {
+        font-size: 14px;
+        top: 1rem;
+    }
 }
