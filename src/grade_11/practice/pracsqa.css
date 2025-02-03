@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
+    background-color: #e0f7e9;
     color: #333;
 }
 
@@ -38,7 +38,7 @@ main {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-bottom: 20px;
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -104,33 +104,68 @@ tbody td.question {
 }
 
 .topic-box.arithmetic {
-    background-color: #ff7f50;
-    color: white;
+    background-color: #e3f2fd;
+    color: #0d47a1;
 }
 
 .topic-box.variables {
-    background-color: #6a5acd;
-    color: white;
+    background-color: #e8f5e9;
+    color: #1b5e20;
 }
 
 .topic-box.functions {
-    background-color: #20b2aa;
-    color: white;
+    background-color: #fff8e1;
+    color: #ff6f00;
+}
+
+.topic-box.input {
+    background-color: #f3e5f5;
+    color: #4a148c;
+}
+
+.topic-box.conditional {
+    background-color: #ffebee;
+    color: #b71c1c;
+}
+
+.topic-box.strings {
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+.topic-box.patterns {
+    background-color: #fce4ec;
+    color: #880e4f;
+}
+
+.topic-box.lists {
+    background-color: #f3e5f5;
+    color: #4a148c;
+}
+
+.topic-box.dictionaries {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.topic-box.numbers {
+    background-color: #e3f2fd;
+    color: #0d47a1;
 }
 
 .level-box.easy {
-    background-color: #28a745;
-    color: white;
+    background-color: #d4edda;
+    color: #155724;
 }
 
 .level-box.medium {
-    background-color: #ffc107;
-    color: #333;
+    background-color: #fff3cd;
+    color: #856404;
 }
 
 .level-box.hard {
-    background-color: #dc3545;
-    color: white;
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 .answer-icon {
