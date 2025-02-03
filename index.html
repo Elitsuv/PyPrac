@@ -137,7 +137,82 @@
     <br><br>
 
     <footer>
-        <p> &copy; 2025 PyPrac. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="public/pngs/PyPrac.png" alt="PyPrac Logo" width="100">
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms" class="footer-link">Terms and Conditions</a></li>
+                    <li><a href="privacy" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="contributing" class="footer-link">Contributing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy 2025 All Rights Reserved. Made with ❤️ by the PyPrac Team.</p>
+        </div>
     </footer>
+    
+    <style>
+        footer {
+    color: #0055ff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    order: 2;
+    text-align: right;
+    flex: 1 1 100%;
+}
+
+.footer-links {
+    order: 1;
+    flex: 1 1 100%;
+    text-align: left;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #343434;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 30px
+}
+    </style>
 </body>
 </html>
