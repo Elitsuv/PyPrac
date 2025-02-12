@@ -338,13 +338,13 @@ hr {
     .header_text {
         font-size: 28px;
         margin-left: 1rem;
-        text-align: center;
+        text-align: left;
     }
 
     .header_sub-text {
         font-size: 14px;
         margin-left: 1rem;
-        text-align: center;
+        text-align: left;
     }
 
     
