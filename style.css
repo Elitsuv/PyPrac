@@ -334,11 +334,12 @@ hr {
 }
 
 @media (max-width: 768px) {
-    
     .header_text {
-        font-size: 28px;
-        margin-left: 1rem;
+        font-size: 30px;
+        margin-left: 1.5rem;
         text-align: left;
+        font-weight: bold;
+        color: #333;
     }
 
     .header_sub-text {
@@ -347,7 +348,6 @@ hr {
         text-align: left;
     }
 
-    
     .notify {
         font-size: 12px;
         height: 2.5rem;
@@ -357,20 +357,18 @@ hr {
         top: 2rem;
     }
 
-    
     .notification-container {
-        width: 220px;
-        top: 12%;
-        right: 1rem;
+        width: 250px;
+        top: 15%;
+        right: 1.5rem;
+        background-color: #f9f9f9;
     }
 
-    
     .body_container {
         margin: 0 auto;
         padding: 0 1rem;
         text-align: center;
     }
-
 
     h1 {
         font-size: 32px;
@@ -381,7 +379,6 @@ hr {
         font-size: 24px;
     }
 
-   
     .list-container {
         flex-direction: column;
         align-items: center;
@@ -397,20 +394,17 @@ hr {
         text-align: center;
     }
 
-    
     .footer {
         padding: 12px 0;
         font-size: 12px;
     }
 
-    
     .mobile-alert {
         font-size: 12px;
         padding: 8px;
         top: 1rem;
     }
 
-    
     summary {
         font-size: 18px;
         word-wrap: break-word;
