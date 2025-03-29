@@ -5,214 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="public/pngs/PyPrac.png" type="image/x-logo">
-
-    <!-- Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <title>PyPrac - Home</title>
 </head>
 <body>
-
-    <!-- alert for mobile view -->
-
-    <div class="mobile-alert" id="mobileAlert">
-        <span>Open in Desktop for better experience</span>
-        <span class="close-btn" id="closeBtn">&times;</span>
-    </div>
-
-    <script>
-        
-        if (window.innerWidth <= 768) {
-            
-            const mobileAlert = document.getElementById('mobileAlert');
-            mobileAlert.style.display = 'block';
-
-            const closeBtn = document.getElementById('closeBtn');
-            closeBtn.addEventListener('click', function() {
-                mobileAlert.style.display = 'none';
-            });
-        }
-    </script>
-
-    <nav_header>
-        <div class="header_text"><b>PyPrac</b></div>
-        <div class="header_sub-text"><b><i>Coz practice makes perfect</i></b></div>
-        <br>
-    </nav_header>
-
-    <div class="notify">
-        <a href="https://github.com/Elitsuv/PyPrac"><img src="public/icons/github.png" alt="bell-icon" class="bell-icon" width="30px" height="30px">
-        Star us!</a>
-    </div>
-
-    <br><br><br>
-
-    <div class="body_container">
-        <h1>an Open Sourced <span class="python">Python</span> <br> school-level practice platform for grade 11th and 12th at 0 cost! <br>to <span class="body-animate"></span> your skills
-        </h1>
-    
-    <br><br><br><br>
-
-    <h2>What you wanna learn today?</h2>
-    <h3><i>*For Grade 11th</i></h3>
-    <div class="list-container">
-        <div class="box">
-            <a href="src/grade_11/basicspy">
-                <img src="public/icons/python.png" alt="docs" class="box-icon" width="50px" height="50px">
-                <p>Basics of Python</p>
-            </a>
-        </div>
-        <div class="box">
-            <a href="https://elitsuv.github.io/PyPrac/src/grade_11/practice/practice">
-                <img src="public/icons/questions.png" alt="questions" class="box-icon" width="50px" height="50px">
-                <p>Practice Question</p>
-            </a>
-        </div>
-        <div class="box">
-            <img src="public/icons/challenges.png" alt="challenges" class="box-icon" width="50px" height="50px">
-            <p>Monthly Challenges</p>
-        </div>
-        <div class="box">
-            <img src="public/icons/circuit.png" alt="circuit" class="box-icon" width="50px" height="50px">
-            <p>Logic Gates</p>
-        </div>
-    </div>
-
-    <br><br><br><br>
-    
-    <h3><i>*No resource available for 12th grader now!</i></h3>
-
-    <div class="list-container">
-        <div class="box">
-            <img src="public/icons/python.png" alt="docs" class="box-icon" width="50px" height="50px">
-            <p>Applied Python</p>
-        </div>
-        <div class="box">
-            <img src="public/icons/questions.png" alt="questions" class="box-icon" width="50px" height="50px">
-            <p>Practice Question</p>
-        </div>
-        <div class="box">
-            <img src="public/icons/challenges.png" alt="challenges" class="box-icon" width="50px" height="50px">
-            <p>Monthly Challenges</p>
-        </div>
-        <div class="box">
-            <img src="public/icons/sql.png" alt="circuit" class="box-icon" width="50px" height="50px">
-            <p>MySQL</p>
-        </div>
-    </div>
-
-    <br><br><br>
-
-    <h2>Frequently Asked Questions</h2>
-    <details>
-        <summary>
-            <h4>Why choose PyPrac?</h4>
-            <span class="material-symbols-outlined">➜</span>  
-        </summary>
-        <p>We focus on providing questions based on school-level problems in a more organized way at no cost!</p>
-    </details>
-    
-    <hr>
-    
-    <details>
-        <summary>
-            <h4>Can we practice as many questions as we want?</h4>
-            <span class="material-symbols-outlined">➜</span>  
-        </summary>
-        <p>Yes, you can practice as much as you want with no limitations.</p>
-    </details> 
-    
-    <hr>
-    
-    <details>
-        <summary>
-            <h4>Are the quality of questions good enough?</h4>
-            <span class="material-symbols-outlined">➜</span>  
-        </summary>
-        <p>Practice karke dekh lo, mitra!</p>
-    </details>
-
-    <br><br>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-                <img src="public/pngs/PyPrac.png" alt="PyPrac Logo" width="100">
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/" class="logo-link">PyPrac</a>
             </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="terms" class="footer-link">Terms and Conditions</a></li>
-                    <li><a href="privacy" class="footer-link">Privacy Policy</a></li>
-                    <li><a href="contributing" class="footer-link">Contributing</a></li>
+            <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#grade-11">Grade 11</a></li>
+                    <li><a href="#grade-12">Grade 12</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
+                <div class="search-container" id="searchContainer">
+                    <input type="text" placeholder="Search resources..." class="search-box" id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy 2025 All Rights Reserved. Made with ❤️ by the Elitsuv.</p>
-        </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero" id="home">
+            <h1>Master <span class="highlight">Python</span> with PyPrac</h1>
+            <p class="subtitle">A free, open-source platform for Grades 11 & 12 students to practice Python.</p>
+            <a href="#grade-11" class="cta-btn">Start Learning</a>
+        </section>
+
+        <section class="resources" id="grade-11">
+            <h2>Grade 11 Resources</h2>
+            <div class="grid-container">
+                <a href="src/grade_11/basicspy" class="grid-item" data-search="Basics of Python, Python basics, Grade 11 Python">Basics of Python</a>
+                <a href="https://elitsuv.github.io/PyPrac/src/grade_11/practice/practice" class="grid-item" data-search="Practice Questions, Grade 11 practice, Python practice">Practice Questions</a>
+                <a href="#" class="grid-item" data-search="Monthly Challenges, Challenges, Grade 11 challenges">Monthly Challenges</a>
+                <a href="#" class="grid-item" data-search="Logic Gates, Grade 11 logic, Python logic">Logic Gates</a>
+            </div>
+        </section>
+
+        <section class="resources" id="grade-12">
+            <h2>Grade 12 Resources</h2>
+            <div class="grid-container">
+                <a href="#" class="grid-item" data-search="Advanced Python, Grade 12 Python">Advanced Python</a>
+                <a href="#" class="grid-item" data-search="Practice Questions, Grade 12 practice">Practice Questions</a>
+                <a href="#" class="grid-item" data-search="Monthly Challenges, Grade 12 challenges">Monthly Challenges</a>
+                <a href="#" class="grid-item" data-search="MySQL, Database, Grade 12 SQL">MySQL Basics</a>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <details data-search="Why choose PyPrac, PyPrac benefits, Why PyPrac">
+                    <summary>Why choose PyPrac?</summary>
+                    <p>Free, organized, school-focused Python practice for students.</p>
+                </details>
+                <details data-search="Unlimited questions, Practice limits, Can I practice unlimited">
+                    <summary>Can I practice unlimited questions?</summary>
+                    <p>Yes, there are no limits—practice as much as you want!</p>
+                </details>
+                <details data-search="Quality of content, PyPrac quality, Good resources">
+                    <summary>Are the resources high quality?</summary>
+                    <p>Designed with school curriculums in mind—try it out!</p>
+                </details>
+            </div>
+        </section>
+
+        <div class="search-results" id="searchResults"></div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 PyPrac. Open Source. Built by <a href="https://github.com/Elitsuv" target="_blank" class="github-btn">Elitsuv</a></p>
     </footer>
-    
-    <style>
-        footer {
-    color: #0055ff;
-    padding: 40px 20px;
-    font-family: 'Poppins', sans-serif;
-    border-top: 1px solid #e7e7e7;
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-about {
-    order: 2;
-    text-align: right;
-    flex: 1 1 100%;
-}
-
-.footer-links {
-    order: 1;
-    flex: 1 1 100%;
-    text-align: left;
-}
-
-.footer-links h4 {
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 5px;
-}
-
-.footer-links a {
-    color: #343434;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: none;
-    color: red;
-}
-
-.footer-bottom {
-    text-align: left;
-    margin-top: 20px;
-}
-
-h4 {
-    font-size: 30px
-}
-    </style>
+    <script src="script.js"></script>
 </body>
 </html>
