@@ -2,6 +2,8 @@
 
 Welcome to **PyPrac**! This is a practice platform for Python, specially designed for grade 11th and 12th students. It's completely free, and you can practice as much as you want. You can even contribute your own Python questions to help others improve their skills.
 
+> No materials for 12th. Still under development
+
 ## How to Use PyPrac
 
 ### Step 1: Accessing PyPrac
