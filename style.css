@@ -256,7 +256,7 @@ body {
     border-left: 4px solid #ffeb3b;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     display: none;
-    animation: slideRight 10s ease-in-out forwards;
+    animation: slideRight 30s ease-in-out forwards;
 }
 
 .notification-box i {
