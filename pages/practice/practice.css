@@ -1,0 +1,172 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #005cc6, #003f8a);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    flex: 1;
+    text-align: center;
+}
+
+header .sqa {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* New color combination */
+    color: white;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+header .sqa:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+header .sqa::after {
+    content: '→'; 
+    font-size: 1.2rem;
+    margin-left: 8px; /* Increased margin for better spacing */
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#questions-container {
+    margin-bottom: 20px;
+}
+
+.question {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: #005cc6;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.options li:hover {
+    background: #e0e0e0;
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #005cc6, #003f8a);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#submit-btn:hover {
+    background: linear-gradient(135deg, #003f8a, #002a5e);
+    transform: scale(1.05);
+}
+
+#result-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        order: 1;
+        width: 100%;
+    }
+
+    header .sqa {
+        order: 2;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .question {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .sqa {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .question h2 {
+        font-size: 1.2rem;
+    }
+
+    #submit-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
