@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+.toc {
+    width: 250px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .toc {
+    background: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.toc h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.note {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .note {
+    background: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.note h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.note p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.code-container {
+    position: relative;
+    margin-top: 1rem;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+.dark-mode pre {
+    background: #333;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.copy-btn:hover {
+    background: #0056b3;
+}
+
+.copy-btn.copied {
+    background: #28a745;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #007bff;
+    color: white;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .toc {
+        width: 100%;
+        position: static;
+    }
+
+    .content {
+        padding: 0;
+    }
+}

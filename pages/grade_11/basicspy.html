@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basicspy.css">
+    <link rel="icon" href="public/pngs/PyPrac.png" type="image/x-logo">
+
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <title>PyPrac - Basics of Python</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Basics of Python</h1>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
+    <main>
+        <aside class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#variables">Variables and Data Types</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#conditional-statements">Conditional Statements</a></li>
+                <li><a href="#loops">Loops</a></li>
+                <li><a href="#lists-tuples">Lists and Tuples</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#dictionaries">Dictionaries</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#file-handling">File Handling</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <section class="note" id="introduction">
+                <h2>Introduction</h2>
+                <p>Python is a high-level, interpreted programming language renowned for its simplicity, readability, and versatility. Created by Guido van Rossum and first released in 1991, Python is widely used in web development, data analysis, artificial intelligence, scientific computing, automation, and more. Its syntax is designed to be clear and concise, making it an ideal choice for beginners and experienced developers alike.</p>
+                <p>Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its extensive standard library and active community contribute to its popularity.</p>
+                <div class="code-container">
+                    <pre><code># This is a single-line comment
+"""
+This is a multi-line comment
+used for documentation or notes
+"""
+print("Hello, World!")  # This prints a string to the console</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="variables">
+                <h2>Variables and Data Types</h2>
+                <p>In Python, variables are used to store data and are dynamically typed, meaning you don’t need to declare the type explicitly. Python supports various data types, including integers, floats, strings, booleans, and complex numbers. Variable names should be descriptive and follow naming conventions (e.g., use lowercase with underscores for multi-word names).</p>
+                <p>Python’s type system is flexible, allowing variables to change types during execution. Use the <code>type()</code> function to check a variable’s type.</p>
+                <div class="code-container">
+                    <pre><code># Integer
+age = 21
+print(type(age))  # Output: <class 'int'>
+
+# Float
+pi = 3.14
+print(type(pi))   # Output: <class 'float'>
+
+# String
+name = "Alice"
+print(type(name)) # Output: <class 'str'>
+
+# Boolean
+is_student = True
+print(type(is_student)) # Output: <class 'bool'></code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="operators">
+                <h2>Operators</h2>
+                <p>Operators are symbols that perform operations on variables and values. Python includes arithmetic, comparison, logical, assignment, bitwise, and membership operators. Understanding operator precedence is crucial for writing correct expressions.</p>
+                <p>Below are examples of commonly used operators. Note that Python follows standard mathematical precedence (e.g., multiplication before addition).</p>
+                <div class="code-container">
+                    <pre><code># Arithmetic Operators
+a = 10
+b = 5
+print(a + b)  # Output: 15 (Addition)
+print(a - b)  # Output: 5 (Subtraction)
+print(a * b)  # Output: 50 (Multiplication)
+
+# Comparison Operators
+print(a == b)  # Output: False (Equality)
+print(a > b)   # Output: True (Greater than)
+
+# Logical Operators
+print(a > 5 and b < 10)  # Output: True (Logical AND)
+print(not(a > 5))        # Output: False (Logical NOT)
+
+# Membership Operators
+fruits = ["apple", "banana"]
+print("apple" in fruits)  # Output: True</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="conditional-statements">
+                <h2>Conditional Statements</h2>
+                <p>Conditional statements allow you to execute different code blocks based on conditions. Python uses <code>if</code>, <code>elif</code>, and <code>else</code> to handle decision-making. Conditions are evaluated as boolean expressions.</p>
+                <p>Nested conditionals can be used for complex logic, but avoid excessive nesting for readability. Use logical operators to combine conditions when possible.</p>
+                <div class="code-container">
+                    <pre><code>age = 18
+
+if age < 18:
+    print("Minor")
+elif age == 18:
+    print("Just turned adult")
+else:
+    print("Adult")
+
+# Nested conditional
+if age >= 18:
+    if age >= 21:
+        print("Can drink")
+    else:
+        print("Adult but not 21")</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="loops">
+                <h2>Loops</h2>
+                <p>Loops allow repeated execution of code. Python provides <code>for</code> loops (for iterating over sequences) and <code>while</code> loops (for condition-based repetition). Use <code>break</code> to exit a loop early and <code>continue</code> to skip to the next iteration.</p>
+                <p>Loop control statements enhance flexibility but should be used judiciously to maintain code clarity.</p>
+                <div class="code-container">
+                    <pre><code># For loop with range
+for i in range(5):
+    print(i)  # Output: 0, 1, 2, 3, 4
+
+# While loop with break
+count = 0
+while count < 5:
+    if count == 3:
+        break
+    print(count)
+    count += 1
+
+# For loop with continue
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="lists-tuples">
+                <h2>Lists and Tuples</h2>
+                <p>Lists and tuples are sequence types for storing multiple items. Lists are mutable (can be modified), while tuples are immutable (cannot be changed after creation). Both support indexing, slicing, and iteration.</p>
+                <p>Lists are ideal for dynamic collections, while tuples are used for fixed data or when immutability is desired.</p>
+                <div class="code-container">
+                    <pre><code># List (mutable)
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits[0])  # Output: apple
+print(fruits)     # Output: ['apple', 'banana', 'cherry', 'orange']
+
+# Tuple (immutable)
+colors = ("red", "green", "blue")
+print(colors[1])  # Output: green
+# colors[1] = "yellow"  # This would raise an error</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="strings">
+                <h2>Strings</h2>
+                <p>Strings are immutable sequences of characters used to store text. Python provides methods like <code>upper()</code>, <code>lower()</code>, <code>split()</code>, and <code>join()</code> for string manipulation. Strings support slicing and formatting.</p>
+                <p>F-strings (formatted string literals) are a modern way to embed expressions inside strings.</p>
+                <div class="code-container">
+                    <pre><code># String operations
+greeting = "Hello, World!"
+print(greeting.upper())  # Output: HELLO, WORLD!
+
+# String slicing
+print(g Committee on Publication Ethicseting[0:5])  # Output: Hello
+
+# F-string
+name = "Alice"
+message = f"{greeting} {name}"
+print(message)  # Output: Hello, World! Alice
+
+# String methods
+words = greeting.split()
+print(words)  # Output: ['Hello,', 'World!']</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="dictionaries">
+                <h2>Dictionaries</h2>
+                <p>Dictionaries store data in key-value pairs, providing fast lookups. Keys must be immutable (e.g., strings, numbers, tuples), while values can be of any type. Dictionaries are mutable and support methods like <code>get()</code>, <code>keys()</code>, and <code>values()</code>.</p>
+                <p>Use dictionaries for data that needs to be accessed by unique identifiers.</p>
+                <div class="code-container">
+                    <pre><code># Dictionary
+student = {
+    "name": "Alice",
+    "age": 21,
+    "is_student": True
+}
+print(student["name"])  # Output: Alice
+print(student.get("age"))  # Output: 21
+
+# Adding a new key-value pair
+student["grade"] = "A"
+print(student)
+
+# Dictionary methods
+print(student.keys())  # Output: dict_keys(['name', 'age', 'is_student', 'grade'])</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="functions">
+                <h2>Functions</h2>
+                <p>Functions are reusable code blocks that perform specific tasks. They improve code organization, readability, and reusability. Python functions can have parameters, default arguments, and return values.</p>
+                <p>Functions can also accept variable numbers of arguments using <code>*args</code> and <code>**kwargs</code>.</p>
+                <div class="code-container">
+                    <pre><code># Basic function
+def greet(name):
+    return f"Hello, {name}!"
+print(greet("Alice"))  # Output: Hello, Alice!
+
+# Function with default parameter
+def add(a, b=10):
+    return a + b
+print(add(5))  # Output: 15
+print(add(5, 20))  # Output: 25
+
+# Variable arguments
+def sum_numbers(*args):
+    return sum(args)
+print(sum_numbers(1, 2, 3, 4))  # Output: 10</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+            <section class="note" id="file-handling">
+                <h2>File Handling</h2>
+                <p>Python provides built-in functions for reading and writing files. The <code>with</code> statement ensures files are properly closed after operations. Common modes include <code>'r'</code> (read), <code>'w'</code> (write), and <code>'a'</code> (append).</p>
+                <p>File handling is useful for tasks like logging, data processing, and configuration management.</p>
+                <div class="code-container">
+                    <pre><code># Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!\n")
+    file.write("This is a new line.")
+
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+# Reading lines into a list
+with open('example.txt', 'r') as file:
+    lines = file.readlines()
+    print(lines)</code></pre>
+                    <button class="copy-btn" aria-label="Copy Code">Copy</button>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 PyPrac. All rights reserved.</p>
+    </footer>
+    <script src="basics.js"></script>
+</body>
+</html>

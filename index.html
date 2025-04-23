@@ -6,36 +6,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="public/pngs/PyPrac.png" type="image/x-logo">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>PyPrac - Home</title>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="/" class="logo-link">PyPrac</a>
+                <a href="https://elitsuv.github.io/PyPrac/" class="logo-link">PyPrac</a>
             </div>
             <button class="hamburger" aria-label="Toggle menu" id="hamburger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
+                <i class="fas fa-bars"></i>
             </button>
             <div class="nav-menu" id="navMenu">
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#grade-11">Grade 11</a></li>
-                    <li><a href="#grade-12">Grade 12</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://github.com/PyPrac" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"><i class="fas fa-graduation-cap"></i> Grade <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#grade-11" data-grade="11">Grade 11</a>
+                            <a href="#grade-12" data-grade="12">Grade 12</a>
+                        </div>
+                    </li>
+                    <li><a href="#submit-questions"><i class="fas fa-question"></i> Submit Questions</a></li>
                 </ul>
-                <div class="search-container" id="searchContainer">
-                    <input type="text" placeholder="Search resources..." class="search-box" id="searchInput">
+                <div class="search-container">
+                    <input type="text" placeholder="Search (e.g., Grade 11 MCQs)..." class="search-box" id="searchInput" autocomplete="off">
                     <button class="search-btn" id="searchBtn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
+                        <i class="fas fa-search"></i>
                     </button>
+                    <div class="search-results" id="searchResults"></div>
                 </div>
             </div>
         </nav>
@@ -45,26 +45,61 @@
         <section class="hero" id="home">
             <h1>Master <span class="highlight">Python</span> with PyPrac</h1>
             <p class="subtitle">A free, open-source platform for Grades 11 & 12 students to practice Python.</p>
-            <a href="#grade-11" class="cta-btn">Start Learning</a>
-        </section>
-
-        <section class="resources" id="grade-11">
-            <h2>Grade 11 Resources</h2>
-            <div class="grid-container">
-                <a href="src/grade_11/basicspy" class="grid-item" data-search="Basics of Python, Python basics, Grade 11 Python">Basics of Python</a>
-                <a href="https://elitsuv.github.io/PyPrac/src/grade_11/practice/practice" class="grid-item" data-search="Practice Questions, Grade 11 practice, Python practice">Practice Questions</a>
-                <a href="#" class="grid-item" data-search="Monthly Challenges, Challenges, Grade 11 challenges">Monthly Challenges</a>
-                <a href="#" class="grid-item" data-search="Logic Gates, Grade 11 logic, Python logic">Logic Gates</a>
+            <div class="cta-buttons">
+                <a href="#docs" class="cta-btn">Docs</a>
+                <a href="#get-started" class="cta-btn">Get Started</a>
             </div>
         </section>
 
-        <section class="resources" id="grade-12">
-            <h2>Grade 12 Resources</h2>
-            <div class="grid-container">
-                <a href="#" class="grid-item" data-search="Advanced Python, Grade 12 Python">Advanced Python</a>
-                <a href="#" class="grid-item" data-search="Practice Questions, Grade 12 practice">Practice Questions</a>
-                <a href="#" class="grid-item" data-search="Monthly Challenges, Grade 12 challenges">Monthly Challenges</a>
-                <a href="#" class="grid-item" data-search="MySQL, Database, Grade 12 SQL">MySQL Basics</a>
+        <section class="resources" id="resources">
+            <div class="notification-box" id="notificationBox">
+                <i class="fas fa-lightbulb"></i>
+                <span>Grade 12 Content is in Beta Stage</span>
+            </div>
+            <h2 id="resourceTitle">Grade 11 Resources</h2>
+            <div class="grid-container" id="resourceGrid">
+                <!-- Grade 11 Cards -->
+                <a href="pages/grade_11/basicspy.html" class="grid-item" data-grade="11" data-search="Basics of Python, Python basics, Grade 11 Python, Grade 11 MCQs">
+                    <i class="fas fa-code"></i>
+                    <h3>Basics of Python</h3>
+                    <p>Learn Python fundamentals with interactive lessons.</p>
+                </a>
+                <a href="https://elitsuv.github.io/PyPrac/src/grade_11/practice/practice" class="grid-item" data-grade="11" data-search="Practice Questions, Grade 11 practice, Python practice, PyPrac, Grade 11 MCQs">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>PyPrac</h3>
+                    <p>Practice Python with curated questions.</p>
+                </a>
+                <a href="#" class="grid-item" data-grade="11" data-search="Monthly Challenges, Challenges, Grade 11 challenges, Monthly Qs, Grade 11 MCQs">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Monthly Qs</h3>
+                    <p>Test your skills with monthly challenges.</p>
+                </a>
+                <a href="#" class="grid-item" data-grade="11" data-search="Logic Gates, Grade 11 logic, Python logic, Grade 11 MCQs">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Logic Gates</h3>
+                    <p>Explore logic gates with Python.</p>
+                </a>
+                <!-- Grade 12 Cards -->
+                <a href="#" class="grid-item hidden" data-grade="12" data-search="Advanced Python, Grade 12 Python, Python ADV, Grade 12 MCQs">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Python (ADV)</h3>
+                    <p>Dive into advanced Python concepts.</p>
+                </a>
+                <a href="#" class="grid-item hidden" data-grade="12" data-search="Practice Questions, Grade 12 practice, PyPrac, Grade 12 MCQs">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>PyPrac</h3>
+                    <p>Advanced practice questions for Grade 12.</p>
+                </a>
+                <a href="#" class="grid-item hidden" data-grade="12" data-search="Monthly Challenges, Grade 12 challenges, Monthly Qs, Grade 12 MCQs">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Monthly Qs</h3>
+                    <p>Challenge yourself with advanced problems.</p>
+                </a>
+                <a href="#" class="grid-item hidden" data-grade="12" data-search="MySQL, Database, Grade 12 SQL, Grade 12 MCQs">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                    <p>Learn database management with MySQL.</p>
+                </a>
             </div>
         </section>
 
@@ -85,12 +120,10 @@
                 </details>
             </div>
         </section>
-
-        <div class="search-results" id="searchResults"></div>
     </main>
 
     <footer class="footer">
-        <p>© 2025 PyPrac. Open Source. Built by <a href="https://github.com/Elitsuv" target="_blank" class="github-btn">Elitsuv</a></p>
+        <p>© 2025 PyPrac. Open Source. Built by <a href="https://github.com/Elitsuv" target="_blank">Elitsuv</a></p>
     </footer>
 
     <script src="script.js"></script>
